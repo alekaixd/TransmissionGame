@@ -547,5 +547,9 @@ PrefabInstance:
       propertyPath: movePoint
       value: 
       objectReference: {fileID: 1296863611}
+    - target: {fileID: 8036097545478349972, guid: 1e3d29e7f29ac3747bc874b9e21684e1, type: 3}
+      propertyPath: Lopetaliikkuminen.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e3d29e7f29ac3747bc874b9e21684e1, type: 3}

@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
 {
     public float movespeed = 5f;
     public Transform movePoint;
+
+    public LayerMask Lopetaliikkuminen;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,16 @@ public class Movement : MonoBehaviour
         {
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) //Palauttaa itseisarvon horisontaalisesta liikkumisesta (käytännössä siis tarkistaa että pelaaja liikkuu 100% yhteensuuntaan)
             {
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-            }
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f) //Sama kuin ylempi, mutta tällä kertaa vertikaaliseen liikkumiseen
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 2f, Lopetaliikkuminen)) //Katsoo onko edesse esteitä Jos on niin estää movepointin siirymisen sinne
+                {
+                    movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                }
+            } else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f) //Sama kuin ylempi, mutta tällä kertaa vertikaaliseen liikkumiseen
             {
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), 2f, Lopetaliikkuminen)) //Katsoo onko edesse esteitä Jos on niin estää movepointin siirymisen sinne
+                {
+                    movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                }
             }
         }
     }
