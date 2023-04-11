@@ -10,10 +10,13 @@ public class Movement : MonoBehaviour
     public Transform movePoint;
 
     public LayerMask Lopetaliikkuminen;
+    private GameObject[] liikuteltavaObjecti;
     // Start is called before the first frame update
     void Start()
     {
         movePoint.parent = null; //Est‰‰ movepointin liikkumisen pelaajan mukana
+
+        liikuteltavaObjecti = GameObject.FindGameObjectsWithTag("Liikuteltava");
     }
 
     // Update is called once per frame

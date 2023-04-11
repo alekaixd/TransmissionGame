@@ -537,6 +537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Liikuteltava objekti
       objectReference: {fileID: 0}
+    - target: {fileID: 2438264290258783893, guid: 900b0e74730cde34fa3b81083fc2d85b, type: 3}
+      propertyPath: m_TagString
+      value: Liikuteltava
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900b0e74730cde34fa3b81083fc2d85b, type: 3}
 --- !u!1001 &7501195146068493121
@@ -593,6 +597,10 @@ PrefabInstance:
     - target: {fileID: 7501195146348011316, guid: 1e3d29e7f29ac3747bc874b9e21684e1, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501195146348011318, guid: 1e3d29e7f29ac3747bc874b9e21684e1, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e3d29e7f29ac3747bc874b9e21684e1, type: 3}
